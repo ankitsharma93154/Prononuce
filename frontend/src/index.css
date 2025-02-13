@@ -1,0 +1,325 @@
+/* Navbar styling */
+body{
+  margin:0;
+  padding:0;
+}
+.root{
+  min-height: 100vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF9D23; /* Orange from the color palette */
+  padding: 12px 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.logo h1{
+  font-size: 2rem;
+  color: #fff;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f9e1d2; /* Light Orange for hover effect */
+}
+
+.nav-links a:active {
+  color: #e5d0a1; /* Even lighter orange when clicked */
+}
+
+.logo{
+  display: flex;
+  gap: 10px;
+}
+.logo img{
+  padding-top: 25px;
+  height:40px;
+  width:40px;
+}
+
+
+/*input*/
+
+.input-container{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+/* Styling for each input */
+input[type="text"], select{
+  flex: 1;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 2px solid #FF9D23;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  width:100%;
+  min-width: 375px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: #D95A00;
+  outline: none;
+  box-shadow: 0 0 8px rgba(217, 90, 0, 0.6);
+}
+
+
+.input-box{
+  display: flex;
+  flex-direction: column;
+}
+
+/*feature section*/
+.features {
+  text-align: center;
+  padding: 40px;
+  max-width: 840px;
+  margin:0 auto;
+}
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.feature-item {
+  padding: 20px;
+  border-radius: 10px;
+  background: #fef9e1;
+}
+.icon {
+  font-size: 40px;
+  color: #ff9d23;
+}
+
+
+/* Media query for mobile screens */
+@media (max-width: 700px) {
+
+  main{
+    padding-left: 0px;
+  }
+  .input-container {
+    flex-direction: column; /* Stack the items vertically on mobile */
+   align-content: flex-start;
+   gap:0px;
+   margin:10px;
+   margin-top:0px;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-content{
+    padding: 0px;
+  }
+  .navbar{
+    margin-bottom: 20px;
+  }
+  .footer{
+    margin-top: 5px;
+  }
+  .MuiToggleButtonGroup-root.MuiToggleButtonGroup-horizontal.css-1qb8o-MuiToggleButtonGroup-root {
+    float:left;
+    padding-left: 10px;
+  
+}
+.pronounce-box{
+  margin:10px;
+}
+
+
+  input[type="text"], select{
+   box-sizing: border-box;
+   min-width: 250px;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .pronounce-button{
+    margin: 10px;
+  }
+  .hero-content{
+    text-align: justify;
+  }
+}
+/*hero section*/
+
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  /* Adjust input fields */
+  input, select {
+    width: 80%; /* Reduce width for better spacing */
+    font-size: 1rem; /* Make text more readable */
+  }
+
+
+  /* Align items to center */
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+  }
+
+ 
+
+  /* Navbar adjustments */
+  .navbar {
+    padding: 12px;
+    font-size: 1.2rem;
+  }
+
+  /* Footer text size */
+  .footer {
+    font-size: 0.9rem;
+  }
+}
+
+
+/*button*/
+.pronounce-button {
+  padding: 12px 16px;
+  border: 2px solid #0A2472; /* Dark Navy */
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  background-color: #0A2472; /* Dark Navy */
+  transition: all 0.3s ease;
+}
+
+/* Change color on hover */
+.pronounce-button:hover {
+  background-color: #FF9D23; /* Orange */
+  color: #0A2472; /* Dark Navy */
+  border-color: #FF9D23;
+  cursor: pointer;
+}
+
+
+.MuiToggleButtonGroup-root.MuiToggleButtonGroup-horizontal.css-1qb8o-MuiToggleButtonGroup-root {
+ float:left;
+ padding-right: 10px;
+}
+
+.pronounce-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* Hero Section */
+.hero-content {
+  text-align: center;
+  padding:10px;
+}
+
+.hero-title {
+  font-size: 2rem;
+  color: #c14600; /* Primary color from palette */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #9e9e9e;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin:0 auto;
+  min-height: 350px;
+  background: #fef9e1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+.phonetic{
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.phonetic-image{
+  height: 40px;
+  width: 40px;
+  float:left;
+  padding-right: 10px;
+}
+/* Add this in your CSS file */
+.phonetic-image:active {
+  transform: scale(0.9); /* Shrinks slightly when clicked */
+  transition: transform 0.1s ease-in-out;
+}
+
+/*fonts*/
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #E5D0AC;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+h1, h2, li {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+
+/* Footer Styling */
+.footer {
+  background-color: #FF9D23; /* Light Orange from the color palette */
+  color: #FEF9E1 ; /* Dark Orange for text */
+  text-align: center;
+  padding: 5px 0;
+  font-size: 16px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  bottom:0;
+  margin-top: 30px;
+}
+
+.footer p{
+  font-size: 18px;
+}
+
