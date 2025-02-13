@@ -218,6 +218,7 @@ input[type="text"]:focus, select:focus {
   color: #fff;
   background-color: #0A2472; /* Dark Navy */
   transition: all 0.3s ease;
+  margin-left:10px ;
 }
 
 /* Change color on hover */
@@ -231,7 +232,6 @@ input[type="text"]:focus, select:focus {
 
 .MuiToggleButtonGroup-root.MuiToggleButtonGroup-horizontal.css-1qb8o-MuiToggleButtonGroup-root {
  float:left;
- padding-right: 10px;
 }
 
 .pronounce-box{
@@ -292,9 +292,7 @@ input[type="text"]:focus, select:focus {
 /*fonts*/
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #E5D0AC;
-  background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+ 
 }
 
 h1, h2, li {
