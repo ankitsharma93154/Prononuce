@@ -8,14 +8,12 @@ const axios = require('axios');
 // Create cache instance (keeps pronunciations for 1 hour)
 const cache = new NodeCache({ stdTTL: 3600 });
 
+
 // Initialize Express app
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 require("dotenv").config();
-
-console.log(process.env.GOOGLE_APPLICATION_CREDENTIALS);
-
 
 // Creates a client
 const { GoogleAuth } = require('google-auth-library');
