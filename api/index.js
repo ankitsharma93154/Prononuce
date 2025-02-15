@@ -8,14 +8,25 @@ const axios = require('axios');
 // Create cache instance (keeps pronunciations for 1 hour)
 const cache = new NodeCache({ stdTTL: 3600 });
 
-// Creates a client
-const client = new textToSpeech.TextToSpeechClient();
-
 // Initialize Express app
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 require("dotenv").config();
+
+console.log(process.env.GOOGLE_APPLICATION_CREDENTIALS);
+
+
+// Creates a client
+const { GoogleAuth } = require('google-auth-library');
+
+// Create a client using environment variables
+const client = new textToSpeech.TextToSpeechClient({
+  auth: new GoogleAuth({
+    credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS)
+  })
+});
+
 
 // Helper function to generate cache key
 const getCacheKey = (word, accent, voice) => {
