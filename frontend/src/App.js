@@ -93,6 +93,13 @@ const App = () => {
             {isLoading ? 'Loading...' : 'Pronounce'}
           </button>
         </div>
+
+         {/* Display Loading Indicator */}
+         {isLoading && (
+          <div className="loading-container">
+            <p>Fetching pronunciation...</p>
+          </div>
+        )}
         
         {/* Hero Section (Only disappears when "Pronounce" is clicked) */}
         {!hasPronounced && (
@@ -101,13 +108,6 @@ const App = () => {
             <p className="hero-subtitle">
               Hear words pronounced in multiple accents and voices, all at the click of a button.
             </p>
-          </div>
-        )}
-
-        {/* Display Loading Indicator */}
-        {isLoading && (
-          <div className="loading-container">
-            <p>Fetching pronunciation...</p>
           </div>
         )}
 
